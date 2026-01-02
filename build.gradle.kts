@@ -229,7 +229,7 @@ dokka {
 gradlePlugin {
     plugins {
         create("simplePlugin") {
-            id = "xyz.wagyourtail.unimined"
+            id = "dev.firstdark.unimined"
             implementationClass = "xyz.wagyourtail.unimined.UniminedPlugin"
         }
     }
@@ -239,7 +239,7 @@ publishing {
     repositories {
         maven {
             name = "WagYourMaven"
-            url = uri("https://maven.wagyourtail.xyz/" + if (project.hasProperty("version_snapshot")) "snapshots/" else "releases/")
+            url = uri("https://maven.firstdark.dev/" + if (project.hasProperty("version_snapshot")) "snapshots/" else "releases/")
             credentials {
                 username = project.findProperty("mvn.user") as String? ?: System.getenv("USERNAME")
                 password = project.findProperty("mvn.key") as String? ?: System.getenv("TOKEN")

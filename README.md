@@ -1,5 +1,26 @@
 # Unimined
 
+## Soft Fork
+
+This is fork is a maintenance only fork. This means that it's only there to fix critical breaking issues and allow our team to continue working while waiting for upstream to fix it.
+
+Relevant PRs will be submitted back upstream as well. You should still be using the official releases from the official repo, unless the pending PR is not yet merged or the issue not yet fixed.
+
+This fork is available from our maven at:
+
+* Releases: `https://maven.firstdark.dev/releases`
+* Snapshots: `https://maven.firstdark.dev/snapshots`
+
+The plugin ID is changed to `dev.firstdark.unimined` to avoid any confusion. Everything else should remain the same.
+
+### Our versioning explained
+
+We use the following version format: `MAJOR.MINOR.PATCH+UPSTREAM_MAJOR.UPSTREAM_MINOR.UPSTREAM_PATCH`. This means the following:
+
+Version `1.0.0+1.3.16`: It's version 1.0.0 of our fork, based on the upstream code of version 1.3.16.
+
+---
+
 Unified Minecraft modding environment with support for legacy environments.
 
 for details on usage, see [the docs](Writerside/topics/starter-topic.md)
@@ -62,8 +83,8 @@ Yes, this is possible, see [PrcraftExampleMod](https://github.com/prcraft-minecr
 
 ## Recommended Setup
 1. take one of the versions from [testing](./testing)
-1. remove `includeBuild('../../')` from `settings.gradle`
-1. put a proper version number for the plugin in `build.grade`
+2. remove `includeBuild('../../')` from `settings.gradle`
+3. put a proper version number for the plugin in `build.grade`
 
 ## Other Setups
 
